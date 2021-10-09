@@ -1,26 +1,27 @@
 {
-  "name": "note-taker",
-  "version": "1.0.0",
-  "description": "UPADTED",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "author": "Edgardo Pina",
-  "license": "MIT",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "directories": {
-    "lib": "lib"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/edgardopina/note-taker.git"
-  },
-  "bugs": {
-    "url": "https://github.com/edgardopina/note-taker/issues"
-  },
-  "homepage": "https://github.com/edgardopina/note-taker#readme"
+   "name": "note-taker",
+   "version": "1.0.0",
+   "description": "UPADTED",
+   "main": "server.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node server.js"
+   },
+   "author": "Edgardo Pina",
+   "license": "MIT",
+   "dependencies": {
+      "express": "^4.17.1",
+      "uid2": "^1.0.0"
+   },
+   "directories": {
+      "lib": "lib"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/edgardopina/note-taker.git"
+   },
+   "bugs": {
+      "url": "https://github.com/edgardopina/note-taker/issues"
+   },
+   "homepage": "https://github.com/edgardopina/note-taker#readme"
 }
