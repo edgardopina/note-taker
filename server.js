@@ -13,6 +13,12 @@ function filterByQuery(query, notesArray) {
    return filteredResults;
 }
 
+function findById(id, notesArray) {
+   const result = notesArray.filter((note) => note.id === id)[0]; // first element
+   return result;
+}
+
+// GET by req.query
 app.get('/api/notes', (req, res) => {
    let results = notes;
    console.log(req.query);
@@ -21,6 +27,16 @@ app.get('/api/notes', (req, res) => {
       // results = results;
    }
    res.json(results);
+});
+
+// GET by req.params
+app.get('/api/notes/:id', (req, res) => {
+   const result = findById(req.params.id, notes);
+    if (result) {
+       res.json(result);
+    } else {
+       res.send(404);
+    }
 });
 
 app.listen(PORT, () => {
