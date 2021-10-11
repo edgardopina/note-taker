@@ -7,6 +7,7 @@
 const router = require('express').Router();
 const notesRoutes = require('../apiRoutes/notesRoutes');
 
+// here we are using the notesRoutes module and could add new modules after it
 router.use(notesRoutes);
 
 module.exports = router;

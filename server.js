@@ -1,8 +1,8 @@
-// The apiRoutes and htmlRoutes require() statements will read the index.js files in each of the 
-// directories indicated.This mechanism works the same way as directory navigation does in a 
+// The apiRoutes and htmlRoutes require() statements will read the index.js files in each of the
+// directories indicated.This mechanism works the same way as directory navigation does in a
 // website: If we navigate to a directory that doesn't have an index.html file, then the contents
 // are displayed in a directory listing. But if there's an index.html file, then it is read and its
-// HTML is displayed instead. Similarly, with require(), the index.js file will be the default 
+// HTML is displayed instead. Similarly, with require(), the index.js file will be the default
 // file read if no other file is provided, which is the coding method we're using here.
 const apiRoutes = require('./Develop/routes/apiRoutes');
 const htmlRoutes = require('./Develop/routes/htmlRoutes');
@@ -29,19 +29,18 @@ app.use(express.urlencoded({ extended: true }));
 // server that's looking to accept POST data.
 app.use(express.json());
 
-
 // express.static('<location>') - makes all files in <location> static resources
 // for our case all our front-end code can now be accessed without having a
 // specific endpoint created for it (style.css, script.js, etc).
 app.use(express.static('./Develop/public'));
 
-
-// This is our way of telling the server that any time a client navigates to <ourhost>/api, 
+// This is our way of telling the server that any time a client navigates to <ourhost>/api,
 // the app will use the router we set up in apiRoutes.If / is the endpoint, then the router
 // will serve back our HTML routes.
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
+// server listener, awaits for GET, POST, DELETE, etc. requests
 app.listen(PORT, () => {
    console.log(`API server now on port ${PORT}`);
 });
